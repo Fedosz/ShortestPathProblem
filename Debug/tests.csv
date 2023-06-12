@@ -1,0 +1,25 @@
+Full graph
+
+dijkstra;10;37960
+dijkstra;60;561960
+dijkstra;110;922860
+dijkstra;160;1598480
+dijkstra;210;2482860
+dijkstra;260;3468000
+dijkstra;310;4602160
+dijkstra;360;6302160
+dijkstra;410;6912300
+dijkstra;460;8544820
+dijkstra;510;10756040
+dijkstra;560;11546980
+dijkstra;610;14244720
+dijkstra;660;19501720
+dijkstra;710;20550620
+dijkstra;760;20290100
+dijkstra;810;23983600
+dijkstra;860;26318480
+dijkstra;910;25976620
+dijkstra;960;29110400
+dijkstra;1010;31170300
+bellman-ford;10;311340
+bellman-ford;60;71991360

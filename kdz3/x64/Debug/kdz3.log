@@ -1,0 +1,19 @@
+﻿  kdz3.cpp
+C:\Users\fedya\OneDrive\Рабочий стол\GitBash\ShortestPathProblem\kdz3\kdz3.cpp(30,17): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\fedya\OneDrive\Рабочий стол\GitBash\ShortestPathProblem\kdz3\kdz3.cpp(31,15): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\fedya\OneDrive\Рабочий стол\GitBash\ShortestPathProblem\kdz3\kdz3.cpp(59,37): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\fedya\OneDrive\Рабочий стол\GitBash\ShortestPathProblem\kdz3\kdz3.cpp(76,50): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\fedya\OneDrive\Рабочий стол\GitBash\ShortestPathProblem\kdz3\kdz3.cpp(122,17): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\utility(200,16): warning C4244: инициализация: преобразование "_Ty" в "_Ty1", возможна потеря данных
+          with
+          [
+              _Ty=unsigned __int64
+          ]
+          and
+          [
+              _Ty1=int
+          ]
+C:\Users\fedya\OneDrive\Рабочий стол\GitBash\ShortestPathProblem\kdz3\kdz3.cpp(46,53): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::pair<int,int64_t>::pair<unsigned __int64,int,0>(std::pair<unsigned __int64,int> &&) noexcept"
+C:\Users\fedya\OneDrive\Рабочий стол\GitBash\ShortestPathProblem\kdz3\kdz3.cpp(46,21): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::pair<int,int64_t>::pair<unsigned __int64,int,0>(std::pair<unsigned __int64,int> &&) noexcept"
+  LINK : не найден или не выполнена сборка C:\Users\fedya\OneDrive\Рабочий стол\GitBash\ShortestPathProblem\x64\Debug\kdz3.exe при последней инкрементной компоновке; выполняется полная компоновка
+  kdz3.vcxproj -> C:\Users\fedya\OneDrive\Рабочий стол\GitBash\ShortestPathProblem\x64\Debug\kdz3.exe

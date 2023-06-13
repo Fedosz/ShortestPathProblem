@@ -13,12 +13,11 @@ struct Edge {
 std::vector<bool> checkUsed(const std::vector<int>& d, const std::vector<Edge>& edges) {
     std::vector<bool> used(static_cast<int>(d.size()), false);
 
-    for (int i = 0; i < static_cast<int>(d.size()); ++i) {
-        for (const auto& edge : edges) {
-            if ((d[edge.from] != INT_MAX && d[edge.to] > d[edge.from] + edge.cost) || used[edge.from]) {
-                used[edge.to] = true;
-            }
-        }
+    for (int i = 0; i < edges.size(); i++) {
+        int u = edges[i].from;
+        int v = edges[i].to;
+        int weight = edges[i].cost;
+        // Check for negative cycles
     }
 
     return used;

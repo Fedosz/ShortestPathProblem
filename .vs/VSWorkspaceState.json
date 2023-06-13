@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\kdz3"
   ],
-  "SelectedNode": "\\kdz3.sln",
+  "SelectedNode": "\\kdz3\\dijkstra.h",
   "PreviewInSolutionExplorer": false
 }

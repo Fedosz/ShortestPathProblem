@@ -24,7 +24,7 @@ std::ofstream output;
 std::vector<Edge> edges(std::vector<std::vector<int>> matrix) {
 	std::vector<Edge> vec;
 	for (size_t i = 0; i < matrix.size(); i++) {
-		for (size_t j = i; j < matrix.size(); j++) {
+		for (size_t j = 0; j < matrix.size(); j++) {
 			if (i != j && matrix[i][j] != 0) {
 				Edge cur;
 				cur.from = i;
@@ -52,6 +52,8 @@ std::vector<std::vector<std::pair<int, int64_t>>> dijk(std::vector<std::vector<i
 
 void dijkstraRoute(std::vector<std::vector<int>>& graph) {
 	long long sum = 0;
+	int n = edges(graph).size();
+	n /= 2;
 	auto g = dijk(graph);
 	for (int i = 0; i < 5; i++) {
 		auto start = std::chrono::high_resolution_clock::now();
@@ -63,13 +65,15 @@ void dijkstraRoute(std::vector<std::vector<int>>& graph) {
 			std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
 		sum += nanoseconds;
 	}
-	sum /= 5;
-	output << "dijkstra;" << graph.size() << ";" << sum << std::endl;
+	sum /= 5000;
+	output << "dijkstra;" << graph.size() << ";" << n << ";" << sum << std::endl;
 }
 
 void fordRoute(std::vector<std::vector<int>>& graph) {
 	long long sum = 0;
 	std::vector<Edge> vec = edges(graph);
+	int n = edges(graph).size();
+	n /= 2;
 	for (int i = 0; i < 5; i++) {
 		auto start = std::chrono::high_resolution_clock::now();
 
@@ -80,11 +84,13 @@ void fordRoute(std::vector<std::vector<int>>& graph) {
 			std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
 		sum += nanoseconds;
 	}
-	sum /= 5;
-	output << "bellman-ford;" << graph.size() << ";" << sum << std::endl;
+	sum /= 5000;
+	output << "bellman-ford;" << graph.size() << ";" << n << ";" << sum << std::endl;
 }
 
 void floydRoute(std::vector<std::vector<int>>& graph) {
+	int n = edges(graph).size();
+	n /= 2;
 	for (size_t i = 0; i < graph.size(); i++) {
 		for (size_t j = 0; j < graph.size(); j++) {
 			if (i != j && graph[i][j] == 0) {
@@ -103,8 +109,8 @@ void floydRoute(std::vector<std::vector<int>>& graph) {
 			std::chrono::duration_cast<std::chrono::nanoseconds>(elapsed).count();
 		sum += nanoseconds;
 	}
-	sum /= 5;
-	output << "floyd-warshall;" << graph.size() << ";" << sum << std::endl;
+	sum /= 5000;
+	output << "floyd-warshall;" << graph.size() << ";" << n << ";" << sum << std::endl;
 }
 
 int main() {
@@ -224,6 +230,8 @@ int main() {
 			dijkstraRoute(graph);
 		}
 
+		output << std::endl;
+
 		for (int k = 10; k <= 1010; k += 50) {
 			std::vector<std::vector<int>> graph;
 			graph.resize(k);
@@ -241,6 +249,8 @@ int main() {
 			fordRoute(graph);
 		}
 
+		output << std::endl;
+
 		for (int k = 10; k <= 1010; k += 50) {
 			std::vector<std::vector<int>> graph;
 			graph.resize(k);
@@ -257,6 +267,8 @@ int main() {
 
 			floydRoute(graph);
 		}
+
+		output << std::endl;
 	}
 	
 	output.close();
